@@ -1,0 +1,476 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS, Comprehensive
+   Final Project
+
+   Meredith Share Closet Style Sheet
+   Author: Elizabeth Frimpomaa
+   Date:   4/30/2026
+
+   Filename: styles.css
+*/
+
+/* =========================
+   GENERAL / GLOBAL STYLES
+========================= */
+
+@font-face {
+   font-family: "Playfair";
+   src: url("fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+html {
+   background-color: #f8f1f6;
+}
+
+body {
+   width: 95%;
+   max-width: 1200px;
+   margin: 20px auto;
+   font-family: Arial, Helvetica, sans-serif;
+   color: rgb(46, 26, 44);
+   background-color: white;
+   box-shadow: 0 0 25px rgba(70, 20, 60, 0.2);
+}
+
+h1, h2, h3 {
+   font-family: "Playfair", Georgia, serif;
+}
+
+/* =========================
+   HEADER + NAVIGATION
+========================= */
+
+header {
+   background-color: rgb(75, 23, 76);
+   color: white;
+   text-align: center;
+   padding: 30px 20px 20px;
+}
+
+header h1 {
+   font-size: 2.7em;
+   letter-spacing: 1px;
+}
+
+header p {
+   font-size: 1.2em;
+   margin: 10px 0 20px;
+}
+
+nav ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   gap: 12px;
+   padding: 0;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+   background-color: rgba(255,255,255,0.18);
+   padding: 10px 18px;
+   border-radius: 25px;
+}
+
+nav a:hover {
+   background-color: white;
+   color: #4b174c;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+   padding: 25px;
+}
+
+section, aside {
+   margin-bottom: 35px;
+}
+
+/* =========================
+   HOME PAGE STYLES
+========================= */
+
+#hero {
+   min-height: 380px;
+   background: linear-gradient(rgba(75,23,76,0.65), rgba(75,23,76,0.65)), url("images/mc2.jpg") center/cover no-repeat;
+   border-radius: 25px;
+   display: flex;
+   align-items: center;
+   padding: 35px;
+   color: white;
+}
+
+.hero-text {
+   max-width: 600px;
+}
+
+.button {
+   display: inline-block;
+   padding: 12px 20px;
+   background-color: #f3c7d8;
+   color: #4b174c;
+   text-decoration: none;
+   border-radius: 25px;
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+
+.card-row {
+   display: flex;
+   gap: 22px;
+   justify-content: center;
+}
+
+.card {
+   flex: 1 1 280px;
+   background-color: #fff8fb;
+   border-radius: 18px;
+   box-shadow: 0 6px 14px rgba(70,20,60,0.15);
+}
+
+.card img {
+   width: 100%;
+   height: 220px;
+   object-fit: cover;
+}
+
+/* =========================
+   TABLE (GENERAL)
+========================= */
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 15px;
+}
+
+th, td {
+   border: 1px solid rgb(210,190,205);
+   padding: 10px;
+}
+
+th {
+   background-color: rgb(75,23,76);
+   color: white;
+}
+
+tr:nth-of-type(even) {
+   background-color: rgb(248,241,246);
+}
+
+/* =========================
+   BROWSE PAGE STYLES
+========================= */
+
+#browse-intro {
+   background-color: rgb(248,241,246);
+   border-left: 8px solid rgb(75,23,76);
+   padding: 22px;
+}
+
+.category-box {
+   background-color: rgb(255,248,251);
+   border-radius: 15px;
+   padding: 14px;
+   margin-bottom: 18px;
+}
+
+.item-options {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+   gap: 14px;
+}
+
+.item-options img {
+   width: 100%;
+   height: 130px;
+   object-fit: contain;
+}
+
+/* =========================
+   FORM STYLES (BROWSE)
+========================= */
+
+
+
+#requestForm {
+   max-width: 650px;
+   margin: 0 auto;
+   background-color: rgb(255, 248, 251);
+   border-radius: 15px;
+   padding: 20px;
+   box-shadow: 0 3px 8px rgba(70, 20, 60, 0.12);
+}
+
+#requestForm fieldset {
+   border: none;
+}
+
+#requestForm legend {
+   background-color: rgb(75, 23, 76);
+   color: white;
+   border-radius: 10px;
+   padding: 8px;
+   margin-bottom: 15px;
+   width: 100%;
+}
+
+#requestForm label {
+   display: block;
+   margin-top: 12px;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: rgb(75, 23, 76);
+}
+
+#requestForm input,
+#requestForm select,
+#requestForm textarea {
+   display: block;
+   width: 100%;
+   padding: 8px;
+   border: 1px solid rgb(210, 190, 205);
+   border-radius: 7px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#requestForm input:focus:invalid,
+#requestForm select:focus:invalid,
+#requestForm textarea:focus:invalid {
+   background-color: rgb(255, 230, 230);
+   border: 2px solid red;
+}
+
+#requestForm input:focus:valid,
+#requestForm select:focus:valid,
+#requestForm textarea:focus:valid {
+   background-color: rgb(230, 255, 230);
+   border: 2px solid green;
+}
+
+.formQuestion,
+.formNote {
+   margin-top: 12px;
+   color: rgb(75, 23, 76);
+}
+
+.formNote {
+   font-size: 0.9em;
+}
+
+#requestForm .optionLabel {
+   font-weight: normal;
+   color: rgb(46, 26, 44);
+}
+
+#requestForm .optionLabel input {
+   display: inline;
+   width: auto;
+   margin-right: 6px;
+}
+
+.form-buttons {
+   margin-top: 15px;
+}
+
+.form-buttons input {
+   display: inline-block;
+   width: auto;
+   background-color: rgb(75, 23, 76);
+   color: white;
+   border: none;
+   padding: 10px 18px;
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+/* =========================
+   DONATE PAGE STYLES
+========================= */
+
+/* Donate Form Width */
+
+#donateForm {
+   width: 95%;
+   max-width: 1000px;
+   margin: 20px 0;
+}
+
+/* Donate Aside Spacing */
+
+#donate-aside h2 {
+   margin-bottom: 12px;
+}
+
+#donate-aside ul {
+   margin-bottom: 25px;
+}
+
+#donate-aside h3 {
+   margin-top: 25px;
+   margin-bottom: 10px;
+}
+
+#donate-intro {
+   background-color: rgb(248,241,246);
+   border-left: 8px solid rgb(75,23,76);
+   padding: 22px;
+}
+
+#donation-video video {
+   display: block;
+   width: 500px;
+   height: 280px;
+   margin: 20px auto;
+   border-radius: 12px;
+   background-color: rgb(46,26,44);
+}
+
+/* Donation Form Styles for Donate Page */
+
+#donateForm {
+   width: 90%;
+   max-width: 1000px;
+   margin: 20px auto;
+   background-color: rgb(255, 248, 251);
+   border-radius: 15px;
+   padding: 20px;
+   box-shadow: 0 3px 8px rgba(70, 20, 60, 0.12);
+}
+
+#donateForm fieldset {
+   border: none;
+   margin-bottom: 20px;
+}
+
+#donateForm legend {
+   background-color: rgb(75, 23, 76);
+   color: white;
+   border-radius: 10px;
+   padding: 8px;
+   margin-bottom: 15px;
+   width: 100%;
+}
+
+#donateForm label {
+   display: block;
+   margin-top: 12px;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: rgb(75, 23, 76);
+}
+
+#donateForm input,
+#donateForm select,
+#donateForm textarea {
+   display: block;
+   width: 100%;
+   padding: 8px;
+   border: 1px solid rgb(210, 190, 205);
+   border-radius: 7px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#donateForm input[type="radio"],
+#donateForm input[type="checkbox"] {
+   display: inline;
+   width: auto;
+   margin-right: 6px;
+}
+
+#donateForm .optionLabel {
+   display: block;
+   font-weight: normal;
+   color: rgb(46, 26, 44);
+}
+
+#donateForm input:focus:invalid,
+#donateForm select:focus:invalid,
+#donateForm textarea:focus:invalid {
+   background-color: rgb(255, 230, 230);
+   border: 2px solid red;
+}
+
+#donateForm input:focus:valid,
+#donateForm select:focus:valid,
+#donateForm textarea:focus:valid {
+   background-color: rgb(230, 255, 230);
+   border: 2px solid green;
+}
+
+
+/* Checkbox Styling (Donate Page) */
+
+#donateForm .formQuestion {
+   margin-top: 15px;
+   font-weight: bold;
+   color: rgb(75, 23, 76);
+}
+
+#donateForm .optionLabel {
+   display: block;
+   margin-bottom: 10px;
+   font-weight: normal;
+   color: rgb(46, 26, 44);
+}
+
+#donateForm .optionLabel input {
+   display: inline;
+   width: auto;
+   margin-right: 8px;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+   text-align: center;
+   background-color: #4b174c;
+   color: white;
+   padding: 18px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+   body { width: 100%; }
+   nav ul { flex-direction: column; }
+}
+
+
+
+#story {
+   background-color: rgb(255, 248, 251);
+   border-radius: 15px;
+   padding: 22px;
+   box-shadow: 0 3px 8px rgba(70, 20, 60, 0.12);
+}
+
+#story p {
+   line-height: 1.7;
+   margin-bottom: 14px;
+}
+
+#quote-box blockquote {
+   background-color: white;
+   border-left: 6px solid rgb(75, 23, 76);
+   border-radius: 10px;
+   padding: 15px;
+   margin: 15px 0;
+   font-size: 1.05em;
+   font-style: italic;
+   line-height: 1.6;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+    New Perspectives on HTML5 and CSS, Comprehensive
+    Final Project
+    
+    Meredith Share Closet Donate Page
+    Author: Elizabeth Frimpomaa
+    Date:   4/22/2026
+
+    Filename: donate.html
+   -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Donate Items | Meredith Share Closet</title>
+   <link href="reset.css" rel="stylesheet" />
+   <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+   <header>
+      <h1>Meredith Share Closet</h1>
+      <p>Donate gently used items to support students</p>
+
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Items</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="about.html">About & Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <section id="donate-intro">
+         <h2>Give Items a Second Life</h2>
+         <p>
+            Meredith Share Closet accepts clean and gently used clothing, footwear,
+            dorm supplies, and books. Your donation can help another student save
+            money and feel supported on campus.
+         </p>
+      </section>
+
+      <section id="donation-video">
+         <h2>A Message About Donating</h2>
+
+         <video controls>
+			<source src="media/donation-message.mp4" type="video/mp4" />
+			<p><em>To play this video clip, your browser needs to support HTML5.</em></p>
+		</video>
+         <p>
+            Watch this short message to learn why donating useful items can make a
+            difference in the Meredith community.
+         </p>
+      </section>
+
+      <section id="donation-guidelines">
+         <h2>Donation Guidelines</h2>
+
+         <ul>
+            <li>Items should be clean and gently used.</li>
+            <li>Clothing should be washed before donating.</li>
+            <li>Books and school supplies should be in usable condition.</li>
+            <li>Do not donate broken, unsafe, or heavily damaged items.</li>
+         </ul>
+      </section>
+
+      <section id="donate-form-section">
+			<h2>Donation Form</h2>
+
+			<div class="donate-layout">
+
+				<form id="donateForm" action="#" method="get">
+				<fieldset>
+				<legend>Student Information</legend>
+
+				<label for="donorName">Name *</label>
+				<input type="text" id="donorName" name="donorName" placeholder="First and last name" pattern="[A-Za-z\s]+" required />
+
+				<label for="donorID">Student ID *</label>
+				<input type="text" id="donorID" name="donorID" placeholder="nnnnnnn" pattern="[0-9]{7}" maxlength="7" required />
+
+				<label for="donorEmail">Student Email *</label>
+				<input type="email" id="donorEmail" name="donorEmail" placeholder="efrimpomaa@email.meredith.edu" required />
+			</fieldset>
+
+            <fieldset>
+               <legend>Donation Details</legend>
+
+               <label for="itemType">Item Category</label>
+               <select id="itemType" name="itemType">
+                  <option>Clothing</option>
+                  <option>Footwear</option>
+                  <option>Dorm Supplies</option>
+                  <option>Books</option>
+               </select>
+
+               <p class="formQuestion">Item Condition</p>
+
+               <label class="optionLabel">
+                  <input type="radio" name="condition" value="new" /> New
+               </label>
+
+               <label class="optionLabel">
+                  <input type="radio" name="condition" value="gentlyUsed" /> Gently Used
+               </label>
+
+               <label class="optionLabel">
+                  <input type="radio" name="condition" value="used" /> Used
+               </label>
+
+               <label for="conditionRating">Condition Rating</label>
+               <input type="range" id="conditionRating" name="conditionRating" min="1" max="5" value="1" />
+
+               <p class="formNote">1 = fair condition, 5 = excellent condition</p>
+
+               <p class="formQuestion">Donation Includes</p>
+
+			   <label class="optionLabel">
+			   <input type="checkbox" name="clean" /> Item is clean and ready to donate
+			   </label>
+
+		  	   <label class="optionLabel">
+			   <input type="checkbox" name="safe" /> Item is safe and not damaged
+			   </label>
+
+			   <label class="optionLabel">
+			   <input type="checkbox" name="pickupHelp" /> I would like help arranging pickup
+			   </label>
+
+               <label for="dropoffDate">Preferred Drop-off Date</label>
+               <input type="date" id="dropoffDate" name="dropoffDate" />
+
+               <label for="dropoffTime">Preferred Drop-off Time</label>
+               <input type="time" id="dropoffTime" name="dropoffTime" />
+
+               <label for="itemDescription">Item Description</label>
+               <textarea id="itemDescription" name="itemDescription" rows="5" placeholder="Describe the item, size, color, and any important details."></textarea>
+
+               <div class="form-buttons">
+                  <input type="submit" value="Submit Donation" />
+                  <input type="reset" value="Clear Form" />
+               </div>
+            </fieldset>
+               </form>
+
+			<aside id="donate-aside">
+				<h2>Before You Donate</h2>
+
+				<ul>
+					<li>Wash clothing before donating.</li>
+					<li>Make sure items are safe and usable.</li>
+					<li>Include size information when possible.</li>
+					<li>Do not donate broken or heavily damaged items.</li>
+				</ul>
+
+				<h3>Helpful Tip</h3>
+				<p>
+					If you are unsure about an item, describe it clearly in the form
+					so the closet can decide if it can be accepted.
+				</p>
+		</aside>
+
+		</div>
+		</section>
+	</main>
+
+   <footer>
+       <p>&copy; 2026 Meredith Share Closet. All rights reserved.</p>
+   </footer>
+</body>
+</html>
