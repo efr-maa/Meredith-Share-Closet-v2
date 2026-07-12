@@ -1,6 +1,25 @@
 /* Reset Styles */
 
-* {
+*,
+*::before,
+*::after {
    margin: 0;
    padding: 0;
+   /* box-sizing: border-box means padding and border are counted INSIDE
+      an element's declared width, instead of being added on top of it.
+      Without this, elements like form inputs (width: 100% + padding: 8px
+      + a 1px border) become wider than their container and overflow —
+      this was very likely part of why things looked "not fully developed." */
+   box-sizing: border-box;
+}
+
+img,
+video {
+   max-width: 100%;
+   display: block;
+}
+
+button {
+   font: inherit;
+   cursor: pointer;
 }
