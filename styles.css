@@ -17,7 +17,7 @@
 
 @font-face {
    font-family: "Playfair";
-   src: url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+   src: url("fonts/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 
 html {
@@ -75,17 +75,6 @@ h1, h2, h3 {
 /* =========================
    HEADER + NAVIGATION
 ========================= */
-
-.site-header {
-   position: sticky;
-   top: 0;
-   z-index: 100;
-   transition: box-shadow 0.25s ease;
-}
-
-.site-header.is-scrolled {
-   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
-}
 
 header {
    background-color: rgb(75, 23, 76);
@@ -218,7 +207,7 @@ main > aside {
 
 #hero {
    min-height: 380px;
-   background: linear-gradient(rgba(75,23,76,0.65), rgba(75,23,76,0.65)), url("../images/mc2.jpg") center/cover no-repeat;
+   background: linear-gradient(rgba(75,23,76,0.65), rgba(75,23,76,0.65)), url("images/mc2.jpg") center/cover no-repeat;
    border-radius: 25px;
    display: flex;
    align-items: center;
