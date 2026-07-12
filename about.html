@@ -4,37 +4,62 @@
    <!--
     New Perspectives on HTML5 and CSS, Comprehensive
     Final Project
-    
+ 
     Meredith Share Closet About and Contact Page
     Author: Elizabeth Frimpomaa
     Date:   4/23/2026
-
+ 
     Filename: about.html
    -->
-
+ 
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>About & Contact | Meredith Share Closet</title>
-   <link href="reset.css" rel="stylesheet" />
-   <link href="styles.css" rel="stylesheet" />
+ 
+   <title>About &amp; Contact | Meredith Share Closet</title>
+   <meta name="description" content="Learn why Meredith Share Closet exists, how it works, and how to get in touch with questions about donating or requesting an item." />
+ 
+   <meta property="og:title" content="About & Contact | Meredith Share Closet" />
+   <meta property="og:description" content="The story behind Meredith Share Closet and how to reach out with questions." />
+   <meta property="og:type" content="website" />
+   <meta property="og:image" content="images/og-cover.jpg" />
+ 
+   <link rel="icon" href="favicon.ico" sizes="any" />
+ 
+   <link href="css/reset.css" rel="stylesheet" />
+   <link href="css/styles.css" rel="stylesheet" />
 </head>
-
+ 
 <body>
-   <header>
-      <h1>Meredith Share Closet</h1>
-      <p>About the project and how to contact us</p>
-
-      <nav>
-         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="browse.html">Browse Items</a></li>
-            <li><a href="donate.html">Donate</a></li>
-            <li><a href="about.html">About & Contact</a></li>
-         </ul>
-      </nav>
+ 
+   <a class="skip-link" href="#main">Skip to main content</a>
+ 
+   <header class="site-header">
+      <div class="header-inner">
+         <h1>Meredith Share Closet</h1>
+         <p class="tagline">About the project and how to contact us</p>
+ 
+         <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+         >
+            <span class="sr-only">Menu</span>
+            <span class="hamburger" aria-hidden="true"></span>
+         </button>
+ 
+         <nav aria-label="Primary">
+            <ul id="primary-nav">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="browse.html">Browse Items</a></li>
+               <li><a href="donate.html">Donate</a></li>
+               <li><a href="about.html" aria-current="page">About &amp; Contact</a></li>
+            </ul>
+         </nav>
+      </div>
    </header>
-
-   <main>
+ 
+   <main id="main">
       <section id="about-intro">
          <h2>About Meredith Share Closet</h2>
          <p>
@@ -43,23 +68,23 @@
             students in a kind and respectful way.
          </p>
       </section>
-
+ 
       <section id="story">
          <h2>Why I Created This Project</h2>
          <p>
-            As an international student, I understand how important it is to manage money carefully.
-            Sometimes my parents are not able to send much upkeep money because of international transfer
-            fees, exchange rates, and other financial challenges. Because of this, I learned that I do not
-            always need to buy everything new.
+            As an international student, I've learned firsthand how important it is to manage money
+            carefully. International transfer fees, exchange rates, and other financial hurdles mean my
+            parents aren't always able to send much for everyday living expenses. That experience taught
+            me that I don't always need to buy everything new.
          </p>
-
+ 
          <p>
-            Many international students face similar situations, but this need is not only for international
-            students. Domestic students may also struggle with college expenses, housing needs, school
-            supplies, clothing, and daily living costs. Meredith Share Closet is meant to support any student
-            who could benefit from shared resources.
+            Many international students face similar situations — but this need isn't unique to us.
+            Domestic students also deal with the cost of housing, school supplies, clothing, and everyday
+            college life. Meredith Share Closet exists to support any student who could benefit from
+            shared resources, regardless of background.
          </p>
-
+ 
          <p>
             This idea was also inspired by generous campus efforts such as Daisy Trade and supportive
             departments on campus, including areas such as the Martin and Business School spaces that help
@@ -67,65 +92,102 @@
             sharing, and community support.
          </p>
       </section>
-
+ 
       <section id="about-columns">
          <h2>Why This Project Matters</h2>
-
+ 
          <p>
             College students often have items they no longer use, such as clothes, books, dorm supplies, or
             shoes. Instead of throwing those items away, Meredith Share Closet gives students a simple way to
             pass them on to someone else.
          </p>
-
+ 
          <p>
             This project helps students save money, reduce waste, and feel less alone when they need support.
             A jacket, a pair of shoes, a book, or a dorm item may seem small, but it can make a meaningful
             difference for someone trying to manage college life.
          </p>
       </section>
-
+ 
       <section id="process">
          <h2>How the Closet Works</h2>
-
+ 
          <dl>
             <dt>Browse</dt>
             <dd>Students view available items by category.</dd>
-
+ 
             <dt>Request</dt>
             <dd>Students complete a request form with their contact and pickup information.</dd>
-
+ 
             <dt>Donate</dt>
             <dd>Students submit details about items they want to donate.</dd>
-
+ 
             <dt>Pick Up</dt>
             <dd>Students arrange a campus pickup time after their request is reviewed.</dd>
          </dl>
       </section>
-
+ 
       <aside id="quote-box">
          <h2>Student Reflections</h2>
-
+ 
+         <p class="quote-intro">
+            A few thoughts shared by students when asked what a campus sharing closet could mean to them:
+         </p>
+ 
          <blockquote>
-            “This kind of project would help students feel seen and supported, especially when money is tight.”
+            <p>“This kind of project would help students feel seen and supported, especially when money is tight.”</p>
          </blockquote>
-
+ 
          <blockquote>
-            “Sometimes students need small things, but buying everything new can be hard. A sharing closet makes campus feel more caring.”
+            <p>“Sometimes students need small things, but buying everything new can be hard. A sharing closet makes campus feel more caring.”</p>
          </blockquote>
-
+ 
          <blockquote>
-            “I would feel grateful knowing another student cared enough to donate something I needed.”
+            <p>“I would feel grateful knowing another student cared enough to donate something I needed.”</p>
          </blockquote>
       </aside>
-
+ 
       <section id="contact">
          <h2>Contact Us</h2>
-
+ 
          <p>
-            Have a question about donating, requesting, or picking up an item? Use the contact information
-            below.
+            Have a question about donating, requesting, or picking up an item? Send a message below, or
+            reach out directly using the contact information beneath the form.
          </p>
-
+ 
+         <!--
+            Third Formspree endpoint, dedicated to general contact messages
+            (separate from the item-request and donation forms). Create it
+            the same way as the other two, then replace YOUR_FORM_ID.
+         -->
+         <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-ajax>
+            <fieldset>
+               <legend>Send Us a Message</legend>
+ 
+               <!-- Honeypot: invisible to real users, catches simple spam bots -->
+               <label class="honeypot" for="contactHoneypot">Leave this field blank</label>
+               <input class="honeypot" type="text" id="contactHoneypot" name="_gotcha" tabindex="-1" autocomplete="off" />
+ 
+               <input type="hidden" name="_subject" value="New Contact Message — Meredith Share Closet" />
+ 
+               <label for="contactName">Name *</label>
+               <input type="text" id="contactName" name="contactName" placeholder="First and last name" autocomplete="name" required />
+ 
+               <label for="contactEmail">Email *</label>
+               <input type="email" id="contactEmail" name="contactEmail" placeholder="you@email.meredith.edu" autocomplete="email" required />
+ 
+               <label for="contactMessage">Message *</label>
+               <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="How can we help?" required></textarea>
+ 
+               <div class="form-buttons">
+                  <input type="submit" value="Send Message" />
+                  <input type="reset" value="Clear Form" />
+               </div>
+ 
+               <p class="form-status" role="status" aria-live="polite"></p>
+            </fieldset>
+         </form>
+ 
          <address>
             Meredith Share Closet<br />
             Meredith College<br />
@@ -135,9 +197,14 @@
          </address>
       </section>
    </main>
-
+ 
    <footer>
       <p>&copy; 2026 Meredith Share Closet. All rights reserved.</p>
+      <a class="back-to-top" href="#main">Back to top &uarr;</a>
    </footer>
+ 
+   <script src="js/main.js" defer></script>
+ 
 </body>
 </html>
+ 
