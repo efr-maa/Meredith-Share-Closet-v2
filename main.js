@@ -253,16 +253,3 @@ function initAjaxForms() {
 }
 
 
-def find_nth_from_end(head, n):
-    # Move the fast pointer n nodes ahead
-    fast = head
-    for _ in range(n):
-        fast = fast.next
-
-    # Move both pointers until fast reaches the end
-    slow = head
-    while fast is not None:
-        slow = slow.next
-        fast = fast.next
-
-    return slow.value
