@@ -770,6 +770,7 @@ footer .back-to-top:hover {
       flex-basis: 100%;
    }
 
-   
+   #donate-aside {
+      flex-basis: 100%;
    }
 }
